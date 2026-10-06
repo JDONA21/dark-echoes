@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: white;
+}
+
+body {
+  background: #111;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (width >= 500px) {
+  main {
+    grid-template-columns: minmax(30ch, 1fr) 1fr;
+  }
+}
+
+.episode ol {
+  list-style: none;
+}
+
+.episode li {
+  padding: 0.5rem;
+}
+
+.episode li:hover,
+.episode li.selected {
+  background: blue;
+  cursor: pointer;
+}
+
+.episode li:not(:last-child) {
+  border-bottom: 1px solid blue;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+}
